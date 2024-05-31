@@ -1,2 +1,8 @@
 @import url("global.css");
 @import url('header.css');
+@import url('sidebar.css');
+
+.content {
+  padding: 0 20px;
+  display: flex;
+}

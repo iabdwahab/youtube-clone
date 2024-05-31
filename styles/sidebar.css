@@ -1,0 +1,89 @@
+.sidebar {
+  overflow-y: scroll;
+  max-height: calc(100vh - 60px); /* 100vh - header-height */
+  padding-right: 10px;
+  width: 220px;
+}
+.sidebar--hidden {
+  display: none;
+}
+
+.sidebar-list {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.sidebar-list__link,
+.sidebar-list__title-link {
+  /* background-color: #eee; */
+  display: flex;
+  align-items: center;
+  padding: 8px;
+  border-radius: 4px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
+  color: var(--black-color);
+}
+.sidebar-list__link {
+  gap: 16px;
+}
+.sidebar-list__title-link {
+  gap: 4px;
+}
+.sidebar-list__link:hover,
+.sidebar-list__title-link:hover {
+  background-color: #eee;
+}
+.sidebar-list__link--active {
+  background-color: #eee;
+}
+
+/* Make active link filled [Google Icons Method] */
+.sidebar-list__link--active .sidebar-link__icon {
+  font-variation-settings:
+  'FILL' 1,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 24
+}
+
+.sidebar-link__text {
+  font-weight: 500;
+}
+
+.sidebar__hr {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  border-color: var(--gray-color);
+}
+
+
+/* Subscriptions Section */
+.sidebar-subscriptions-link {
+  padding-right: 10px;
+}
+.sidebar__section-title {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+.sidebar-subscriptions-link__img {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+}
+.sidebar-subscriptions-link__text {
+  font-weight: 400;
+  /* Add [...] when text overflow */
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
+  width: 100%;
+
+}
