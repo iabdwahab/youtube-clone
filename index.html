@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="author" content="Ibrahim AbdElwahab" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>YouTube Clone</title>
+
+    <link rel="shortcut icon" href="images/youtube-icon.png" />
+    <!-- Google Icons -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
+      rel="stylesheet"
+    />
+    <!-- Main CSS File -->
+    <link rel="stylesheet" href="styles/index.css" />
+  </head>
+  <body>
+    <div class="page">
+      <header class="header">
+        <div class="header__left-side header__side">
+          <button class="material-symbols-outlined header__sidebar-toggle-btn">menu</button>
+          <a href="#" class="header__logo-link">
+            <img src="images/youtube-full-logo.png" alt="YouTube Logo" class="header__logo"/>
+          </a>
+        </div> <!-- ./header__left-side -->
+
+        <div class="header__center-side header__side">
+          <div class="header__search-container">
+            <span class="material-symbols-outlined header__search-icon">search</span>
+            <input type="text" placeholder="Search" class="header__search-input">
+            <button class="material-symbols-outlined header__search-btn click-opacity-lower">search</button>
+          </div>
+          <div class="header__voice-container">
+            <button class="material-symbols-outlined header__mic-btn header__action-btn click-opacity-lower">mic</button>
+          </div>
+        </div> <!-- ./header__center-side -->
+
+        <div class="header__right-side header__side">
+          <div class="header__create-container">
+            <button class="material-symbols-outlined header__create-btn header__action-btn click-opacity-lower">video_call</button>
+          </div>
+          
+          <div class="header__notifications-container">
+            <button class="material-symbols-outlined header__notifications-btn header__action-btn click-opacity-lower">notifications</button>
+          </div>
+
+          <div class="header__account-container">
+            <button class="material-symbols-outlined header__account-btn header__action-btn click-opacity-lower">account_circle</button>
+          </div>
+        </div> <!-- ./header__right-side -->
+      </header> <!-- ./header -->
+    </div> <!-- ./page -->
+  </body>
+</html>
