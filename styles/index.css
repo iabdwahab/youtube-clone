@@ -14,7 +14,7 @@
 */
 @media (min-width: 970px) {
   .content:not(:has(.sidebar--hidden)) {
-    padding-left: 280px;
+    padding-left: 260px; /* sidebar-width = 240px & padding: 20px => 260px */
   }
 }
 

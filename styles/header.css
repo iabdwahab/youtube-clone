@@ -1,5 +1,5 @@
 .header {
-  padding: 10px 20px;
+  padding: 10px var(--page-container-padding);
   display: flex;
   justify-content: space-between;
   align-items: center;
