@@ -22,7 +22,7 @@ fetch(`https://www.googleapis.com/youtube/v3/videos?key=${API_KEY}&part=snippet,
 .then(res => res.json())
 .then(data => {
 
-	let videosHTML = '';
+  let videosHTMLArr = [];
 
   data.items.forEach(item => {
 
@@ -30,9 +30,9 @@ fetch(`https://www.googleapis.com/youtube/v3/videos?key=${API_KEY}&part=snippet,
     const video = item.snippet;
     const channelId = video.channelId;
 
-    getChannelImage(channelId).then(channelImage => {
-
-      videosHTML += `
+    // videosHTMLArr will be container of all html
+    videosHTMLArr.push(getChannelImage(channelId).then(channelImage => {
+      return `
         <div class="video-container">
           <a href="${videoURL}" class="video-container__thumbnail">
             <img src="${video.thumbnails.high.url}" alt="thumbnails" class="video-container__thumbnail-img">
@@ -57,8 +57,14 @@ fetch(`https://www.googleapis.com/youtube/v3/videos?key=${API_KEY}&part=snippet,
         </div>
       `;
 
-      document.querySelector('.videos-container').innerHTML = videosHTML;
-    });
+    }));
+  });
+
+  Promise.all(videosHTMLArr).then(videosHTMLArr => {
+
+    const videosHTML = videosHTMLArr.join('');
+    document.querySelector('.videos-container').innerHTML = videosHTML;
+
   });
 
 });
