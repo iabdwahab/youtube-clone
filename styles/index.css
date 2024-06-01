@@ -4,5 +4,124 @@
 
 .content {
   padding: 0 20px;
+}
+
+/* 
+  Sidebar is [position: fixed; width: 240px]
+  It will [padding] when sidebar is showed
+*/
+.content:not(:has(.sidebar--hidden)) {
+  padding-left: 280px;
+}
+
+
+.main {
+  padding-top: 10px;
+  width: 100%;
+  max-width: 2000px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.videos-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 30px 20px;
+}
+
+.video-container {
   display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.video-container__thumbnail {
+  position: relative;
+  height: 220px;
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  -ms-border-radius: 10px;
+  -o-border-radius: 10px;
+}
+.video-container__thumbnail-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: inherit;
+  -webkit-border-radius: inherit;
+  -moz-border-radius: inherit;
+  -ms-border-radius: inherit;
+  -o-border-radius: inherit;
+}
+.video-container__time {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  font-size: 14px;
+  color: var(--white-color);
+  background-color: var(--black-color);
+  padding: 4px;
+  border-radius: 4px;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -ms-border-radius: 4px;
+  -o-border-radius: 4px;
+}
+
+/* Video Details */
+.video-container__details {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 10px;
+}
+
+.video-container__channel-img-container {
+  height: fit-content;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+}
+.video-container__channel-img {
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+}
+
+.video-container__text {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+.video-container__title {
+  color: var(--black-color);
+  font-size: 16px;
+  font-weight: 500;
+  width: fit-content;
+}
+.video-container__channel-name {
+  font-weight: 500;
+  font-size: 14px;
+  margin-top: 2px;
+  margin-bottom: 4px;
+  color: var(--blackish-gray-color);
+  width: fit-content;
+}
+
+.video-container__views-date {
+  color: var(--blackish-gray-color);
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+.video-container__middle-dot {
+  font-weight: 600;
 }

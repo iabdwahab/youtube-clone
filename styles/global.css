@@ -8,8 +8,10 @@
   --header-input-hover-color: rgba(0,0,0,0.12);
   --header-input-color: #333;
   --black-color: #222222;
+  --blackish-gray-color: #777777;
   --header-placeholder-color: #3333339a;
   --input-focus-color: #065fd4d7;
+  --white-color: #fff;
 }
 
 * {
@@ -21,6 +23,13 @@
   font-family: "Roboto", sans-serif;
 }
 
+/*
+  Header is [posittion: fixed; height: 60px] 
+  These lines to prevent content from beginning from the top
+*/
+.page {
+  padding-top: 60px;
+}
 
 button {
   background-color: transparent;

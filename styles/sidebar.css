@@ -2,7 +2,9 @@
   overflow-y: scroll;
   max-height: calc(100vh - 60px); /* 100vh - header-height */
   padding-right: 10px;
-  width: 220px;
+  width: 240px;
+  position: fixed;
+  left: 20px;
 }
 .sidebar--hidden {
   display: none;
@@ -51,6 +53,9 @@
 }
 
 .sidebar-link__text {
+  font-weight: 400;
+}
+.sidebar-list__link--active .sidebar-link__text {
   font-weight: 500;
 }
 

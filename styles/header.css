@@ -4,8 +4,12 @@
   justify-content: space-between;
   align-items: center;
   gap: 20px;
-  /* background-color: #eee; */
+  background-color: var(--white-color);
   height: 60px;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  z-index: 100;
 }
 
 .header__side {
@@ -37,6 +41,10 @@
 }
 .header__sidebar-toggle-btn:active {
   background-color: var(--hover-gray-color);
+}
+
+.header__logo {
+  width: 100px;
 }
 
 .header__search-container {
@@ -105,10 +113,6 @@
   -moz-border-radius: 50%;
   -ms-border-radius: 50%;
   -o-border-radius: 50%;
-}
-
-img {
-  max-width: 120px;
 }
 
 @media (max-width: 768px) {
