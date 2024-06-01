@@ -3,7 +3,7 @@
 @import url('sidebar.css');
 
 .content {
-  padding: 0 var(--page-container-padding);
+  padding: 0 var(--page-container-padding) 30px;
   position: relative;
 }
 
@@ -109,11 +109,18 @@
   font-size: 16px;
   font-weight: 500;
   width: fit-content;
+
+  /* Add [...] if text overflow */
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 .video-container__channel-name {
   font-weight: 500;
   font-size: 14px;
-  margin-top: 2px;
+  margin-top: 4px;
   margin-bottom: 4px;
   color: var(--blackish-gray-color);
   width: fit-content;
