@@ -3,15 +3,19 @@
 @import url('sidebar.css');
 
 .content {
-  padding: 0 20px;
+  padding: 0 var(--page-container-padding);
+  position: relative;
 }
 
 /* 
   Sidebar is [position: fixed; width: 240px]
   It will [padding] when sidebar is showed
+  Applied on large screens
 */
-.content:not(:has(.sidebar--hidden)) {
-  padding-left: 280px;
+@media (min-width: 970px) {
+  .content:not(:has(.sidebar--hidden)) {
+    padding-left: 280px;
+  }
 }
 
 
@@ -25,7 +29,7 @@
 
 .videos-container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(310px, 1fr));
   gap: 30px 20px;
 }
 

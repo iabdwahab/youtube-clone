@@ -1,10 +1,13 @@
 .sidebar {
   overflow-y: scroll;
-  max-height: calc(100vh - 60px); /* 100vh - header-height */
-  padding-right: 10px;
+  height: calc(100vh - 60px); /* 100vh - header-height */
   width: 240px;
   position: fixed;
-  left: 20px;
+  left: 0;
+  background-color: var(--white-color);
+  scrollbar-width: thin;
+  padding-left: var(--page-container-padding);
+  padding-right: 10px;
 }
 .sidebar--hidden {
   display: none;
@@ -91,4 +94,13 @@
   overflow: hidden;
   width: 100%;
 
+}
+
+@media (max-width: 970px) {
+  .sidebar {
+    padding: 0 var(--page-container-padding);
+    width: 100vw;
+    z-index: 100;
+    scrollbar-width: none;
+  }
 }

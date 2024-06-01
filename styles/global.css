@@ -12,6 +12,8 @@
   --header-placeholder-color: #3333339a;
   --input-focus-color: #065fd4d7;
   --white-color: #fff;
+
+  --page-container-padding: 20px;
 }
 
 * {
@@ -29,6 +31,7 @@
 */
 .page {
   padding-top: 60px;
+  overflow: hidden;
 }
 
 button {
