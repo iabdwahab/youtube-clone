@@ -65,6 +65,9 @@ fetch(`https://www.googleapis.com/youtube/v3/videos?key=${API_KEY}&part=snippet,
     const videosHTML = videosHTMLArr.join('');
     document.querySelector('.videos-container').innerHTML = videosHTML;
 
+    // Hide Loader after loading content
+    document.querySelector('.videos-container__loader').classList.add('loader--hidden');
+
   });
 
 });
