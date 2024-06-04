@@ -119,4 +119,16 @@
   .header__right-side {
     display: none;
   }
+  
+  .header:has(.header__search-input:focus) .header__left-side {
+    display: none;
+  }
+  .header:has(.header__search-input:focus) .header__center-side {
+    width: 100%;
+  }
+  .header:has(.header__search-input:focus) .header__search-container {
+    width: 100%;
+    grid-template-columns: minmax(0, 1fr) 30px;
+  }
+
 }
