@@ -2,6 +2,8 @@ import "./global.js";
 import "./sidebar.js";
 import { formatViewsCount } from "./utils/formatViewsCount.js"; "./utils/formatViewsCount.js"
 import { calcDate } from "./utils/videoDate.js";
+import { formatDuration } from "./utils/formatVideoDuration.js";
+
 
 const API_KEY = "AIzaSyAQgTk72aRq0BERHR8BkVujgizykGrFxnE";
 
@@ -36,7 +38,7 @@ fetch(`https://www.googleapis.com/youtube/v3/videos?key=${API_KEY}&part=snippet,
         <div class="video-container">
           <a href="${videoURL}" class="video-container__thumbnail">
             <img src="${video.thumbnails.high.url}" alt="thumbnails" class="video-container__thumbnail-img">
-            <span class="video-container__time">16:53</span>
+            <span class="video-container__time">${formatDuration(item.contentDetails.duration)}</span>
           </a>
 
           <div class="video-container__details">
@@ -61,13 +63,9 @@ fetch(`https://www.googleapis.com/youtube/v3/videos?key=${API_KEY}&part=snippet,
   });
 
   Promise.all(videosHTMLArr).then(videosHTMLArr => {
-
     const videosHTML = videosHTMLArr.join('');
+    // This will remove loader from page
     document.querySelector('.videos-container').innerHTML = videosHTML;
-
-    // Hide Loader after loading content
-    document.querySelector('.videos-container__loader').classList.add('loader--hidden');
-
   });
 
 });
@@ -82,3 +80,4 @@ function getChannelImage(channelId) {
 
   });
 };
+
